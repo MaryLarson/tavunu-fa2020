@@ -38,7 +38,7 @@ public class Tavunu {
     
     public void Tavunu ()
     {
-       
+       // tis a empty method - yup 
     }
     
     public String toString ()
