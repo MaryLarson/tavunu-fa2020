@@ -2,7 +2,7 @@
  * Create tavuni.
  * 
  * @author Mithat Konar
- * @author Your Name
+ * @author Mary Ann Larson
  */
 public class TavunuApp {
 
