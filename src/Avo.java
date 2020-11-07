@@ -1,48 +1,44 @@
-
-import static java.lang.System.exit;
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
 /**
- * A tavunu is an imaginary Earth-dwelling being.
  *
- * A tavunu looks a bit like a Patagonian Mara and lives in a non-gendered but
- * hierarchical society. Most interactions among tavuni are negotiated with
- * pava -- items of status used for bargaining.
- *
- * @author Mithat Konar
- * @author Your Name Yup its me Mary Ann Larson
+ * @author Mary Annn Larson
  */
-public abstract class Tavunu {
-    /* See readme.md for what to do. */
+public class Avo extends Tavunu{
     
     
-    protected String name;
-    protected int pava;
-    protected int yearOfBirth;
-    
-    
-    public Tavunu ()
+    public Avo ()
     {
-        name = "";
-        yearOfBirth = Integer.MIN_VALUE;
-        pava = 0;
+       name = "";
+       yearOfBirth = Integer.MIN_VALUE;
+       pava = 0;
     }
     
-
-    Tavunu (String newName, int newBDate, int newPava)
+    public Avo (String newName, int newBDate, int newPava)
     {
-        name = newName;
-        pava = newPava;
-        yearOfBirth = newBDate;
+       name = newName;
+       pava = newPava;
+       yearOfBirth = newBDate; 
+       while (pava <10)
+       {
+           pava ++;
+       }
+       
+       if (pava > 20)
+       {
+           throw new IllegalArgumentException ("invalid pava amount");
+       }
     }
-    
-    
     
     public String toString ()
     {
-       return (name + " born in " + yearOfBirth + " has " + pava + " pava."); 
+       return (name + " born in " + yearOfBirth + " is an Avo with " + pava + " pava."); 
     }
-   
+    
     public boolean setName (String newName)
     {
         boolean correctName = true;
@@ -124,4 +120,8 @@ public abstract class Tavunu {
      {
          yearOfBirth = bDate;
      }
+
+
+    
+    
 }
